@@ -3,7 +3,7 @@ import { FooterLink2 } from "../../data/footer-links";
 import { Link } from "react-router-dom";
 
 // Images
-import Logo from "../../assets/Logo/Logo-Full-Light.png";
+import logo from "../../assets/Logo/A2Tech.png";
 
 // Icons
 import { FaFacebook, FaGoogle, FaTwitter, FaYoutube } from "react-icons/fa";
@@ -19,14 +19,14 @@ const Community = ["Forums", "Chapters", "Events"];
 
 const Footer = () => {
   return (
-    <div className="bg-richblack-800">
+    <div className="bg-black w-100vw">
       <div className="flex lg:flex-row gap-8 items-center justify-between w-11/12 max-w-maxContent text-richblack-400 leading-6 mx-auto relative py-14">
         <div className="border-b w-[100%] flex flex-col lg:flex-row pb-5 border-richblack-700">
           {/* Section 1 */}
           <div className="lg:w-[50%] flex flex-wrap flex-row justify-between lg:border-r lg:border-richblack-700 pl-3 lg:pr-5 gap-3">
             <div className="w-[30%] flex flex-col gap-3 lg:w-[30%] mb-7 lg:pl-0">
-              <img src={Logo} alt="" className="object-contain" />
-              <h1 className="text-richblack-50 font-semibold text-[16px]">
+              <h1 className="font-major-mono text-white text-2xl">A2Tech</h1>
+              <h1 className="text-richblack-50 font-semibold text-[16px] mt-8">
                 Company
               </h1>
               <div className="flex flex-col gap-2">
@@ -165,8 +165,7 @@ const Footer = () => {
               );
             })}
           </div>
-
-          <div className="text-center">Made with ❤️ ASP © 2023 A2Tech</div>
+          <div className="text-center font-manrope text-white font-normal">Made with ❤️ A2Tech © 2024 developed by Next24Tech Technology and Services<span className="font-major-mono text-white">A2Tech</span></div>
         </div>
       </div>
     </div>

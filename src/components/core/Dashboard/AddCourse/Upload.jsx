@@ -64,7 +64,7 @@ export default function Upload({
       </label>
       <div
         className={`${
-          isDragActive ? "bg-richblack-600" : "bg-richblack-700"
+          isDragActive ? "bg-[#6E727F]" : "bg-[#6E727F]"
         } flex min-h-[250px] cursor-pointer items-center justify-center rounded-md border-2 border-dotted border-richblack-500`}
       >
         {previewSource ? (
@@ -99,14 +99,14 @@ export default function Upload({
           >
             <input {...getInputProps()} ref={inputRef} />
             <div className="grid aspect-square w-14 place-items-center rounded-full bg-pure-greys-800">
-              <FiUploadCloud className="text-2xl text-yellow-50" />
+              <FiUploadCloud className="text-2xl text-white" />
             </div>
-            <p className="mt-2 max-w-[200px] text-center text-sm text-richblack-200">
+            <p className="mt-2 max-w-[200px] text-center text-sm text-richblack-50">
               Drag and drop an {!video ? "image" : "video"}, or click to{" "}
-              <span className="font-semibold text-yellow-50">Browse</span> a
+              <span className="font-semibold text-white">Browse</span> a
               file
             </p>
-            <ul className="mt-10 flex list-disc justify-between space-x-12 text-center  text-xs text-richblack-200">
+            <ul className="mt-10 flex list-disc justify-between space-x-12 text-center  text-xs text-richblack-50">
               <li>Aspect ratio 16:9</li>
               <li>Recommended size 1024x576</li>
             </ul>

@@ -40,10 +40,10 @@ export default function Instructor() {
   return (
     <div>
       <div className="space-y-2">
-        <h1 className="text-2xl font-bold text-richblack-5">
+        <h1 className="text-2xl font-bold text-black">
           Hi {user?.firstName} 👋
         </h1>
-        <p className="font-medium text-richblack-200">
+        <p className="font-medium text-richblack-400">
           Let's start something new
         </p>
       </div>
@@ -93,7 +93,7 @@ export default function Instructor() {
             <div className="flex items-center justify-between">
               <p className="text-lg font-bold text-richblack-5">Your Courses</p>
               <Link to="/dashboard/my-courses">
-                <p className="text-xs font-semibold text-yellow-50">View All</p>
+                <p className="text-xs font-semibold text-white">View All</p>
               </Link>
             </div>
             <div className="my-4 flex items-start space-x-6">

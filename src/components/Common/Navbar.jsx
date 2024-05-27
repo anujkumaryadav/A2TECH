@@ -4,7 +4,7 @@ import { BsChevronDown } from "react-icons/bs"
 import { useSelector } from "react-redux"
 import { Link, matchPath, useLocation } from "react-router-dom"
 
-import logo from "../../assets/Logo/Logo-Full-Light.png"
+import logo from "../../assets/Logo/A2Tech.png"
 import { NavbarLinks } from "../../data/navbar-links"
 import { apiConnector } from "../../services/apiConnector"
 import { categories } from "../../services/apis"
@@ -41,18 +41,18 @@ function Navbar() {
 
   return (
     <div
-      className={`flex h-14 items-center justify-center border-b-[1px] border-b-richblack-700 ${
-        location.pathname !== "/" ? "bg-richblack-800" : ""
+      className={`flex h-20 items-center justify-center font-manrope ${
+        location.pathname !== "/" ? "bg-[#27282C]" : "bg-[#27282C]"
       } transition-all duration-200`}
     >
-      <div className="flex w-11/12 max-w-maxContent items-center justify-between">
+      <div className=" flex w-11/12 max-w-maxContent items-center justify-between">
         {/* Logo */}
-        <Link to="/">
-          <img src={logo} alt="Logo" width={160} height={32} loading="lazy" />
+        <Link to="/" className="text-[2rem] font-normal font-major-mono text-white">
+          A2Tech
         </Link>
         {/* Navigation links */}
         <nav className="hidden md:block">
-          <ul className="flex gap-x-6 text-richblack-25">
+          <ul className="flex gap-x-6 text-white font-normal">
             {NavbarLinks.map((link, index) => (
               <li key={index}>
                 {link.title === "Catalog" ? (
@@ -60,8 +60,8 @@ function Navbar() {
                     <div
                       className={`group relative flex cursor-pointer items-center gap-1 ${
                         matchRoute("/catalog/:catalogName")
-                          ? "text-yellow-25"
-                          : "text-richblack-25"
+                          ? "text-white"
+                          : "text-white"
                       }`}
                     >
                       <p>{link.title}</p>
@@ -82,7 +82,7 @@ function Navbar() {
                                     .split(" ")
                                     .join("-")
                                     .toLowerCase()}`}
-                                  className="rounded-lg bg-transparent py-4 pl-4 hover:bg-richblack-50"
+                                  className="bg-transparent py-4 pl-4 hover:bg-richblack-50"
                                   key={i}
                                 >
                                   <p>{subLink.name}</p>
@@ -100,8 +100,8 @@ function Navbar() {
                     <p
                       className={`${
                         matchRoute(link?.path)
-                          ? "text-yellow-25"
-                          : "text-richblack-25"
+                          ? "text-white"
+                          : "text-white"
                       }`}
                     >
                       {link.title}
@@ -126,14 +126,14 @@ function Navbar() {
           )}
           {token === null && (
             <Link to="/login">
-              <button className="rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100">
+              <button className="rounded-[8px] bg-black border border-black bg- px-[12px] py-[8px] text-white font-manrope">
                 Log in
               </button>
             </Link>
           )}
           {token === null && (
             <Link to="/signup">
-              <button className="rounded-[8px] border border-richblack-700 bg-richblack-800 px-[12px] py-[8px] text-richblack-100">
+              <button className="rounded-[8px] bg-white border border-white bg- px-[12px] py-[8px] text-black font-manrope">
                 Sign up
               </button>
             </Link>

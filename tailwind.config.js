@@ -3,6 +3,9 @@ module.exports = {
   content: ["./src/**/*.{js,jsx,ts,tsx}"],
   theme: {
     fontFamily: {
+      'grace': ['Covered By Your Grace', 'cursive'],
+      'major-mono': ['Major Mono Display', 'monospace'],
+      'manrope': ['Manrope', 'sans-serif'],
       inter: ["Inter", "sans-serif"],
       "edu-sa": ["Edu SA Beginner", "cursive"],
       mono: ["Roboto Mono", "monospace"],
@@ -22,7 +25,7 @@ module.exports = {
         500: "#585D69",
         600: "#424854",
         700: "#2C333F",
-        800: "#161D29",
+        800: "#353839",
         900: "#000814",
       },
       richblue: {

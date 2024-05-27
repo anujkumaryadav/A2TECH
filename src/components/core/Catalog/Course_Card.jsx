@@ -27,8 +27,8 @@ function Course_Card({ course, Height }) {
             />
           </div>
           <div className="flex flex-col gap-2 px-1 py-3">
-            <p className="text-xl text-richblack-5">{course?.courseName}</p>
-            <p className="text-sm text-richblack-50">
+            <p className="text-xl text-black">{course?.courseName}</p>
+            <p className="text-sm text-richblack-500">
               {course?.instructor?.firstName} {course?.instructor?.lastName}
             </p>
             <div className="flex items-center gap-2">
@@ -47,7 +47,7 @@ function Course_Card({ course, Height }) {
                 {course?.ratingAndReviews?.length} Ratings
               </span>
             </div>
-            <p className="text-xl text-richblack-5">Rs. {course?.price}</p>
+            <p className="text-xl text-richblack-500">Rs. {course?.price}</p>
           </div>
         </div>
       </Link>
