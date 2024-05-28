@@ -34,6 +34,7 @@ import VerifyEmail from "./pages/VerifyEmail"
 import ViewCourse from "./pages/ViewCourse"
 import { getUserDetails } from "./services/operations/profileAPI"
 import { ACCOUNT_TYPE } from "./utils/constants"
+import OnlineCompiler from "./pages/OnlineCompiler"
 
 function App() {
   const dispatch = useDispatch()
@@ -53,6 +54,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path="/compiler" element={<OnlineCompiler />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="courses/:courseId" element={<CourseDetails />} />

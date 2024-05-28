@@ -8,6 +8,7 @@ import { Toaster } from "react-hot-toast";
 import { Provider } from "react-redux";
 import { configureStore } from "@reduxjs/toolkit";
 import rootReducer from "./reducer";
+import { ChakraProvider } from "@chakra-ui/react";
 
 const store = configureStore({
   reducer: rootReducer,
@@ -18,7 +19,9 @@ root.render(
   <React.StrictMode>
     <Provider store={store}>
       <BrowserRouter>
+ <ChakraProvider>
         <App />
+       </ChakraProvider>
         <Toaster />
       </BrowserRouter>
     </Provider>
