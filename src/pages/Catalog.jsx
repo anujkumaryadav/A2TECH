@@ -84,7 +84,7 @@ function Catalog() {
             className={`px-4 py-2 ${
               active === 1
                 ? "border-b border-b-black text-black"
-                : "text-richblack-50"
+                : "text-richblack-500"
             } cursor-pointer`}
             onClick={() => setActive(1)}
           >
@@ -94,7 +94,7 @@ function Catalog() {
             className={`px-4 py-2 ${
               active === 2
                 ? "border-b border-b-black text-black"
-                : "text-richblack-50"
+                : "text-richblack-500"
             } cursor-pointer`}
             onClick={() => setActive(2)}
           >

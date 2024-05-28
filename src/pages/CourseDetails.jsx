@@ -190,7 +190,7 @@ function CourseDetails() {
           </div>
         </div>
       </div>
-      <div className="mx-auto box-content px-4 text-start text-richblack-5 lg:w-[1260px]">
+      <div className="mx-auto box-content px-4 text-start text-richblack-500 lg:w-[1260px]">
         <div className="mx-auto max-w-maxContentTab lg:mx-0 xl:max-w-[810px]">
           {/* What will you learn section */}
           <div className="my-8 border border-richblack-600 p-8">
@@ -201,7 +201,7 @@ function CourseDetails() {
           </div>
 
           {/* Course Content Section */}
-          <div className="max-w-[830px] ">
+          <div className="max-w-[830px] text-richblack-600">
             <div className="flex flex-col gap-3">
               <p className="text-[28px] font-semibold">Course Content</p>
               <div className="flex flex-wrap justify-between gap-2">
@@ -216,7 +216,7 @@ function CourseDetails() {
                 </div>
                 <div>
                   <button
-                    className="text-yellow-25"
+                    className="text-yellow-200"
                     onClick={() => setIsActive([])}
                   >
                     Collapse all sections
