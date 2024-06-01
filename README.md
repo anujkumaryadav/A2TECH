@@ -1,6 +1,6 @@
 # A2Tech Edtech Project
 
-https://skill-flare.vercel.app/
+https://a2tech.vercel.app/
 ## Installation
 
 1. Clone the repository: `https://github.com/anujkumaryadav/A2Tech.git`
@@ -75,23 +75,3 @@ The back-end of StudyNotion uses various frameworks, libraries, and tools to ens
 - **JWT (JSON Web Tokens):** Used for authentication and authorization, providing a secure and reliable way to manage user credentials.
 - **Bcrypt:** Used for password hashing, adding an extra layer of security to user data.
 - **Mongoose:** Used as an Object Data Modeling (ODM) library, providing a way to interact with MongoDB using JavaScript.
-
-#### Data Models and Database Schema
-
-The back-end of StudyNotion uses several data models and database schemas to manage data, including:
-
-- **Student Schema:** Includes fields such as name, email, password, and course details for each student.
-- **Instructor Schema:** Includes fields such as name, email, password, and course details for each instructor.
-- **Course Schema:** Includes fields such as course name, description, instructor details, and media content.
-
-### Database
-
-The database for the platform is built using MongoDB, a NoSQL database that provides a flexible and scalable data storage solution. MongoDB allows for the storage of unstructured and semi-structured data. The database stores the course content, user data, and other relevant information related to the platform.
-
-![Database Schema](img/schema.png)
-
-### Architecture Diagram
-
-Below is a high-level diagram that illustrates the architecture of the StudyNotion EdTech platform:
-
-![Architecture](img/arcti.png)
