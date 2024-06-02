@@ -165,7 +165,7 @@ const Footer = () => {
               );
             })}
           </div>
-          <div className="text-center font-manrope text-white font-normal">Made with ❤️ A2Tech © 2024 developed by Next24Tech Technology and Services<span className="font-major-mono text-white">A2Tech</span></div>
+          <div className="text-center font-manrope text-white font-normal"> <span className="font-major-mono text-white">A2Tech</span> © 2024 developed by Next24Tech Technology and Services</div>
         </div>
       </div>
     </div>

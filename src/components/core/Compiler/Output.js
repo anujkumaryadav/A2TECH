@@ -30,8 +30,9 @@ const Output = ({ editorRef, language }) => {
   };
 
   return (
-    <Box w="50%" className="mt-[20px] ">
-      <Text mb={3} fontSize="lg" className=" text-richblack-5">
+    <Box w="50%" className="">
+     <div className="pt-0">
+     <Text mb={2} fontSize="lg" className=" text-richblack-5">
         Output:
       </Text>
       
@@ -41,19 +42,20 @@ const Output = ({ editorRef, language }) => {
   variant="outline"
   colorScheme="gray"
   color="gray.800"
-  
+  className="mb-4"
   bg ='gray.200'
   _hover={{ bg:"gray.800", color: 'gray.200' }}
-  mb={4}
+  
   isLoading={isLoading}
   onClick={runCode}
 >
   Run Code
 </Button>
       </Text>
+     </div>
       <Box
         height="70vh"
-        p={2}
+        p={3}
         bg ='gray.100'
         color={isError ? "red.400" : "gray.800"}
         border="1px solid"

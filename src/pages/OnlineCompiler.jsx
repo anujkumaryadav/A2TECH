@@ -4,6 +4,7 @@ import { Editor } from "@monaco-editor/react";
 import LanguageSelector from "../components/core/Compiler/LanguageSelector";
 import { CODE_SNIPPETS } from "../components/core/Compiler/constants";
 import Output from "../components/core/Compiler/Output";
+import Footer from "../components/Common/Footer";
 
 const OnlineCompiler = () => {
   const editorRef = useRef();
@@ -20,8 +21,8 @@ const OnlineCompiler = () => {
     setValue(CODE_SNIPPETS[language]);
   };
 
-  return (
-    <Box className="bg-richblack-100 ">
+  return (<>
+  <Box className="bg-richblack-100 ">
       <HStack spacing={10}>
         <Box w="50%">
           <LanguageSelector language={language} onSelect={onSelect} />
@@ -43,6 +44,9 @@ const OnlineCompiler = () => {
         <Output editorRef={editorRef} language={language} className="mt-5"/>
       </HStack>
     </Box>
+    <Footer/>
+  </>
+    
   );
 };
 export default OnlineCompiler;

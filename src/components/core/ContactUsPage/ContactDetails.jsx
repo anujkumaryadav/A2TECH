@@ -15,7 +15,7 @@ const contactDetails = [
     heading: "Visit us",
     description: "Come and say hello at our office HQ.",
     details:
-      "Ganesh Nagar Borgaon Meghe, Wardha-442001",
+      "302, Gaondev Apt, Opp. Nitin Raj Hotal, Katemanevali, Kalyan E. 421306",
   },
   {
     icon: "IoCall",

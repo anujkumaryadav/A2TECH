@@ -22,10 +22,6 @@ https://a2tech.vercel.app/
 
 Contributions are welcome! If you have any suggestions or find any issues, please feel free to open an issue or a pull request.
 
-## System Architecture
-
-The A2Tech is a  EdTech platform consists of three main components: the front-end, the back-end, and the database. The platform follows a client-server architecture, with the front-end serving as the client and the back-end and database serving as the server.
-
 ### Front-end
 
 The front-end of the platform is built using ReactJS, which allows for the creation of dynamic and responsive user interfaces, crucial for providing an engaging learning experience to students. The front-end communicates with the back-end using RESTful API calls.

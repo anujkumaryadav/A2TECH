@@ -6,9 +6,9 @@ import { Link } from "react-router-dom"
 import Footer from "../components/Common/Footer"
 import CodeBlocks from "../components/core/HomePage/CodeBlocks"
 import HighlightText from "../components/core/HomePage/HighlightText"
-
+import InstructorSection from "../components/core/HomePage/InstructorSection"
 import TimelineSection from "../components/core/HomePage/Timeline"
-
+import LearningLanguageSection from "../components/core/HomePage/LearningLanguageSection"
 import { useEffect, useState } from "react"
 import { useLocation, useNavigate, useParams } from "react-router-dom"
 
@@ -107,11 +107,15 @@ function Home() {
         </div>
 
         <div className="mx-auto flex w-11/12 max-w-maxContent flex-col items-center justify-between gap-8 mb-20">
-          {/* Timeline Section - Section 2 */}
+
+          {/* Timeline Section - Section 2*/}
           <TimelineSection className="mt-10 mb-10"/>
 
           {/* Learning Language Section - Section 3 */}
-          {/* <LearningLanguageSection /> */}
+          <LearningLanguageSection />
+
+          {/* Instruction Section - Section 4 */}
+          <InstructorSection/>
         </div>
       </div>
       {/* Footer */}
