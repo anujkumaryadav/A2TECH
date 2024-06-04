@@ -67,8 +67,8 @@ exports.courseEnrollmentEmail = (courseName, name) => {
   
   <body>
       <div class="container">
-          <a href="https://studynotion-edtech-project.vercel.app"><img class="logo" src="https://ibb.co/qmnCy6J"
-                  alt="A2Tech Logo"></a>
+          <a href="https://a2tech.vercel.app"><img class="logo" src="https://ibb.co/7y2sJxK"
+                  alt="A2TECH Logo"></a>
           <div class="message">Course Registration Confirmation</div>
           <div class="body">
               <p>Dear ${name},</p>
@@ -79,7 +79,7 @@ exports.courseEnrollmentEmail = (courseName, name) => {
               <a class="cta" href="https://studynotion-edtech-project.vercel.app/dashboard">Go to Dashboard</a>
           </div>
           <div class="support">If you have any questions or need assistance, please feel free to reach out to us at <a
-                  href="mailto:info@A2Tech.com">info@A2Tech.com</a>. We are here to help!</div>
+                  href="mailto:info@a2tech.com">info@a2tech.com</a>. We are here to help!</div>
       </div>
   </body>
   

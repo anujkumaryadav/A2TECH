@@ -55,8 +55,8 @@ exports.passwordUpdated = (email, name) => {
     
     <body>
         <div class="container">
-            <a href="https://studynotion-edtech-project.vercel.app"><img class="logo"
-                    src="https://ibb.co/qmnCy6J" alt="A2Tech Logo"></a>
+            <a href="https://a2tech.vercel.app"><img class="logo"
+                    src="https://ibb.co/7y2sJxK" alt="A2Tech Logo"></a>
             <div class="message">Password Update Confirmation</div>
             <div class="body">
                 <p>Hey ${name},</p>
@@ -66,7 +66,7 @@ exports.passwordUpdated = (email, name) => {
             </div>
             <div class="support">If you have any questions or need further assistance, please feel free to reach out to us
                 at
-                <a href="mailto:info@A2Tech.com">info@A2Tech.com</a>. We are here to help!
+                <a href="mailto:info@a2tech.com">info@a2tech.com</a>. We are here to help!
             </div>
         </div>
     </body>

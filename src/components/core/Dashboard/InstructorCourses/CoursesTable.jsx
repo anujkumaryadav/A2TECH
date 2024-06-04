@@ -26,6 +26,11 @@ export default function CoursesTable({ courses, setCourses }) {
   const [confirmationModal, setConfirmationModal] = useState(null)
   const TRUNCATE_LENGTH = 30
 
+  const [roomId, setRoomId] = useState();
+  const handleJoin = () => {
+    navigate(`/live/${roomId}`)
+  }
+
   const handleCourseDelete = async (courseId) => {
     setLoading(true)
     await deleteCourse({ courseId: courseId }, token)
@@ -44,16 +49,16 @@ export default function CoursesTable({ courses, setCourses }) {
       <Table className="rounded-xl border border-richblack-800 ">
         <Thead>
           <Tr className="flex gap-x-10 rounded-t-md border-b border-b-richblack-800 px-6 py-2">
-            <Th className="flex-1 text-left text-sm font-medium uppercase text-richblack-100">
+            <Th className="flex-1 text-left text-sm font-medium uppercase text-richblack-900">
               Courses
             </Th>
-            <Th className="text-left text-sm font-medium uppercase text-richblack-600">
+            <Th className="text-left text-sm font-medium uppercase text-richblack-900">
               Duration
             </Th>
-            <Th className="text-left text-sm font-medium uppercase text-richblack-600">
+            <Th className="text-left text-sm font-medium uppercase text-richblack-900">
               Price
             </Th>
-            <Th className="text-left text-sm font-medium uppercase text-richblack-600">
+            <Th className="text-left text-sm font-medium uppercase text-richblack-900">
               Actions
             </Th>
           </Tr>
@@ -61,9 +66,8 @@ export default function CoursesTable({ courses, setCourses }) {
         <Tbody>
           {courses?.length === 0 ? (
             <Tr>
-              <Td className="py-10 text-center text-2xl font-medium text-richblack-600">
+              <Td className="py-10 text-center text-2xl font-medium text-richblack-900">
                 No courses found
-                {/* TODO: Need to change this state */}
               </Td>
             </Tr>
           ) : (
@@ -79,7 +83,7 @@ export default function CoursesTable({ courses, setCourses }) {
                     className="h-[148px] w-[220px] rounded-lg object-cover"
                   />
                   <div className="flex flex-col justify-between">
-                    <p className="text-lg font-semibold text-richblack-500">
+                    <p className="text-lg font-semibold text-richblack-900">
                       {course.courseName}
                     </p>
                     <p className="text-xs text-richblack-500">
@@ -91,7 +95,7 @@ export default function CoursesTable({ courses, setCourses }) {
                             .join(" ") + "..."
                         : course.courseDescription}
                     </p>
-                    <p className="text-[12px] text-white">
+                    <p className="text-[12px] text-richblack-400">
                       Created: {formatDate(course.createdAt)}
                     </p>
                     {course.status === COURSE_STATUS.DRAFT ? (
@@ -101,7 +105,7 @@ export default function CoursesTable({ courses, setCourses }) {
                       </p>
                     ) : (
                       <p className="flex w-fit flex-row items-center gap-2 rounded-full bg-richblack-700 px-2 py-[2px] text-[12px] font-medium text-white">
-                        <div className="flex h-3 w-3 items-center justify-center rounded-full bg-richblack-500 text-richblack-100">
+                        <div className="flex h-3 w-3 items-center justify-center rounded-full bg-white text-richblack-700">
                           <FaCheck size={8} />
                         </div>
                         Published
@@ -109,13 +113,13 @@ export default function CoursesTable({ courses, setCourses }) {
                     )}
                   </div>
                 </Td>
-                <Td className="text-sm font-medium text-richblack-500">
+                <Td className="text-sm font-medium text-richblack-900">
                   2hr 30min
                 </Td>
-                <Td className="text-sm font-medium text-richblack-500">
+                <Td className="text-sm font-medium text-richblack-900">
                   ₹{course.price}
                 </Td>
-                <Td className="text-sm font-medium text-richblack-500 ">
+                <Td className="text-sm font-medium text-richblack-900 ">
                   <button
                     disabled={loading}
                     onClick={() => {
@@ -154,6 +158,10 @@ export default function CoursesTable({ courses, setCourses }) {
           )}
         </Tbody>
       </Table>
+      <div className="flex justify-center items-center w-full gap-2">
+        <input type="text" placeholder="Enter RoomID" value={roomId} onChange={e=>setRoomId(e.target.value)} className="bg-[#4A4B4E] text-white h-10 rounded-lg p-2 mt-4 "/>
+        <button onClick={handleJoin} className="bg-black p-2 rounded-md text-white px-5 mt-4">Go Live</button>
+      </div>
       {confirmationModal && <ConfirmationModal modalData={confirmationModal} />}
     </>
   )
